@@ -1,0 +1,15 @@
+language: go # specifies tools needed for building.
+
+# Refer to https://docs.travis-ci.com/user/customizing-the-build/
+script: # specifies the building procedure.
+  # execute_templates.go reads ./template.txt and writes to ./executed_template.txt
+  - go run execute_templates.go 
+
+# Refer to https://docs.travis-ci.com/user/deployment/releases
+deploy:
+  provider: releases # deploy to Github Release objects. 
+  api_key: "GITHUB OAUTH TOKEN"
+  file: $TRAVIS_BUILD_DIR/executed_template.txt
+  skip_cleanup: true
+  on:
+    tags: true # Deploy only tags, not branches.
