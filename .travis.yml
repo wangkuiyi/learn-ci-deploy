@@ -8,7 +8,7 @@ script: # specifies the building procedure.
 # Refer to https://docs.travis-ci.com/user/deployment/releases
 deploy:
   provider: releases # deploy to Github Release objects. 
-  api_key: "32c738d19dc3990776de071c0cd583cc7ec63ff5" # Github Oauth token
+  api_key: "d303fcee75f90dfa5c74e81e7c84406061ed340c" # Github Oauth token
   file: $TRAVIS_BUILD_DIR/executed_template.txt
   skip_cleanup: true
   on:
