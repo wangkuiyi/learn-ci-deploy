@@ -1,7 +1,7 @@
-  <img src="w3html.gif" onload="loadImage(this)" width="100" height="132">
+  <img id="shit" src="w3html.gif" onload="loadImage()" width="100" height="132">
   <script>
-    function loadImage(this) {
-	this.src = "a.png"
+    function loadImage() {
+	document.getElementById("shit").src = "a.png"
     }
   </script>
 
